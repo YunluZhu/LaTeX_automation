@@ -20,8 +20,7 @@ from metapub import pubmedcentral
 
 
 # %%
-# filename = input('Where is .bib file: ')
-filename = "/Users/yunluzhu/Documents/Lab2/Writings/K99/_with EmyLou/10 day deadline/k99.bib"
+filename = input('Where is .bib file: ')
 # %%
 parser = bibtex.Parser()
 bib_data = parser.parse_file(filename)
