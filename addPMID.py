@@ -13,7 +13,6 @@ process:
 
 # %%
 from pybtex.database.input import bibtex
-from pybtex.database.input.bibtex import Parser
 # from metapub import convert
 from tqdm import tqdm
 from metapub import pubmedcentral
@@ -45,7 +44,7 @@ for e in tqdm(bib_data.entries):
         pmcid = None
         
     # add note field
-    newbib_parser = Parser()
+    newbib_parser = bibtex.Parser()
     newbib_parser.data.add_entry('note',entry)
 
     note_field = f"PMCID: {pmcid}"
